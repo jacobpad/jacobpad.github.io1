@@ -1,0 +1,47 @@
+
+        /*******************************************
+        Available Fonts:
+        https://fonts.google.com/selection?category=Display,Handwriting,Monospace&selection.family=Faster+One|Fondamento|Fruktur|Gaegu|Julee|Kirang+Haerang|Metal+Mania|Nosifer|Piedra|Redressed|Sirin+Stencil|Trade+Winds
+            font-family: 'Faster One', cursive;
+            font-family: 'Fondamento', cursive;
+            font-family: 'Nosifer', cursive;
+            font-family: 'Trade Winds', cursive;
+            font-family: 'Redressed', cursive;
+            font-family: 'Julee', cursive;
+            font-family: 'Gaegu', cursive;
+            font-family: 'Kirang Haerang', cursive;
+            font-family: 'Metal Mania', cursive;
+            font-family: 'Piedra', cursive;
+            font-family: 'Sirin Stencil', cursive;
+            font-family: 'Fruktur', cursive;
+            changing some things
+        *******************************************/
+        body {
+            background-color: #dddddd;
+            margin: 1.25rem auto;
+            padding: .5rem;
+            max-width: 50%;
+        }
+
+        #name {
+            text-align: center;
+            font-size: 4.5em;
+            font-family: 'Metal Mania', cursive;
+        }
+
+        #cit230 {
+            font-size: 2em;
+            text-align: center;
+            font-family: 'Trade Winds', cursive;
+        }
+
+        #otherProjects {
+            font-size: 2em;
+            text-align: center;
+            font-family: 'Nosifer', cursive;
+            /* font-family: 'Trade Winds', cursive;
+            background: rgb(65, 67, 164);
+            background: -moz-linear-gradient(top, rgb(65, 67, 164) 0%, rgb(35, 136, 203) 63%, rgb(80, 93, 117) 100%);
+            background: -webkit-linear-gradient(top, rgb(65, 67, 164) 0%, rgb(35, 136, 203) 63%, rgb(80, 93, 117) 100%);
+            background: linear-gradient(to bottom, rgb(65, 67, 164) 0%, rgb(35, 136, 203) 63%, rgb(80, 93, 117) 100%); */
+        }

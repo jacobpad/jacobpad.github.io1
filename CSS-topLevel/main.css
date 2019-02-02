@@ -14,7 +14,7 @@
             font-family: 'Piedra', cursive;
             font-family: 'Sirin Stencil', cursive;
             font-family: 'Fruktur', cursive;
-            changing some things
+            Changing some things
         *******************************************/
         body {
             background-color: #dddddd;
@@ -50,3 +50,4 @@
             background: -webkit-linear-gradient(top, rgb(65, 67, 164) 0%, rgb(35, 136, 203) 63%, rgb(80, 93, 117) 100%);
             background: linear-gradient(to bottom, rgb(65, 67, 164) 0%, rgb(35, 136, 203) 63%, rgb(80, 93, 117) 100%); */
         }
+        

@@ -1,0 +1,87 @@
+/*******************************************
+FONTS:
+    font-family: 'VT323', monospace;       footer
+    font-family: 'B612 Mono', monospace;   regular text
+    font-family: 'Bungee', cursive;        header
+    font-family: 'Alfa Slab One', cursive; h tags
+*******************************************/
+
+/******************************************
+COLOR SCHEME:
+    #1C705E
+    #B88A29  -- background
+    #360000
+    #421B45
+    #CE7A5B
+******************************************/
+*{
+    max-width: 960px;
+    margin: 0 auto;
+}
+body{
+    background-color: #B88A29;
+    text-align: center;
+    display: inline;
+}
+
+header{
+    font-family: 'B612 Mono', monospace;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-family: 'B612 Mono', monospace;
+}
+
+.section1{
+    background-color: chocolate;
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 10px;
+    border-style: double;
+}
+
+#logo{
+    width:  200px;
+    height: 200px;
+    display: inline;
+}
+
+#siteName{
+    display: inline;
+}
+
+.motto{
+    display: inline;
+}
+
+img{
+    width: 175px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 5px;
+    font-family: 'B612 Mono', monospace;
+}
+
+p{
+    font-family: 'B612 Mono', monospace;
+}
+
+footer{
+    font-family: 'VT323', monospace;
+}
+
+nav{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-style: double;
+}
+
+.section2, .section3, .section4, .section5, .section6{
+    padding-top: 0px;
+    padding-bottom: 0px;
+    margin: 10px;
+    border-style: double;
+}

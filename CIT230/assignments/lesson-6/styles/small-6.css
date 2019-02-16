@@ -80,7 +80,9 @@ p {
 }
 
 footer {
+  font-size: 2rem;
   font-family: "VT323", monospace;
+  background-color: chocolate;
 }
 
 nav {
@@ -119,13 +121,25 @@ nav {
   /* max-width: 900px; */
 }
 
+.footer-date{
+  font-size: .8rem;
+}
+
 /************************************* Media Quarry *************************************/
 @media screen and (max-width: 500px) {
-  .forecast-pic {
+  /* .forecast-pic {
     display: none;
-  }
+  } */
 
   .weather-summary{
     display: none;
   }
+
+  .hide{
+    display: none;
+  }
+
+
+
+
 }

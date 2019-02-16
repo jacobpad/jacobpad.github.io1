@@ -32,4 +32,10 @@
   .menu{
     display: none;
   }
+
+  .hide{
+    display: block;
+  }
+
+
 }

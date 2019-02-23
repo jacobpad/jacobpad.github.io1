@@ -86,11 +86,12 @@ nav {
   font-size: .8rem;
 }
 
+/* 
 #gallery-images {
   display: grid;
   grid-gap: 25px;
   grid-template-columns: repeat(3, 1fr);
-}
+} */
 
 .active {
   color: blue;
@@ -111,8 +112,20 @@ nav {
     display: none;
   }
 
-  nav > button > ul > li {
+  nav>button>ul>li {
     display: flex;
     flex-direction: column;
+  }
+
+  #gallery-images {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 20px;
+    align-content: center;
+  }
+
+  .gallery-pictures>img {
+    width: 300px;
+    height: auto;
   }
 }

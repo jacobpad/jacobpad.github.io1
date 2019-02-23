@@ -38,10 +38,23 @@
     display: block;
   }
 
+  #gallery-images{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 20px;
+    align-content: center;
+  }
+
+  .gallery-pictures > img{
+    width: 300px;
+    height: auto;
+  }
+
   .gallery-pictures:hover {
-    display: flex;
-    flex-wrap: wrap;
-    transform: scale(1.05);
+    background-color: chartreuse;
+    transform: scale(1.5);
     box-shadow: 20px 20px 20px #360000;
   }
+  
 }

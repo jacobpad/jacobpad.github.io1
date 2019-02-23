@@ -39,7 +39,7 @@ var dayOfWeek = dayNames[today.getDay()];
 // console.log(dayOfWeek);
 
 // Get Day of Month
-var dayNumber = today.getDay();
+var dayNumber = today.getDate();
 // console.log(dayNumber);
 
 //  Full Date

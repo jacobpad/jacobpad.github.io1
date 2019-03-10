@@ -61,7 +61,6 @@ footer {
 nav {
   padding-top: 5px;
   padding-bottom: 5px;
-  /* border-style: double; */
 }
 
 .forecast-pic {
@@ -85,13 +84,6 @@ nav {
 .footer-date {
   font-size: .8rem;
 }
-
-/* 
-#gallery-images {
-  display: grid;
-  grid-gap: 25px;
-  grid-template-columns: repeat(3, 1fr);
-} */
 
 nav li.active {
   background-color: #d44a16;
@@ -139,7 +131,6 @@ form fieldset {
 }
 
 #sliderVal {
-  /* display: inline-block; */
   font-weight: bold;
 }
 
@@ -150,81 +141,23 @@ form fieldset {
   display: inline-block;
 }
 
-/*
-.formDiv label{
-  display: inline-block;
-  margin-top: 12px;
-  font-weight: bold;
-  width: 200px;
-  text-align: left;
-  border: 3px solid chartreuse;
-}
-
-.formDiv input, .formDiv select, .formDiv output, .formDiv textarea, input datalist, #formRadioY, #formRadioM, #formRadioN, #rating{
-  border: 3px solid magenta;
-  padding: 2px; 
-  text-align: right;
-}
-
-#formRadioY, #formRadioM, #formRadioN{
-  width: auto;
-  margin: 0px;
-  display: inline-block;
-}
-
-#addRadioPadding{
-  margin-bottom: 12px;
-}
-
-#sliderVal{
-  font-weight: bold;
-}
-
-#formSubmit{
-  margin: 5px;
-  transform: scale(1.5);
-  border: 2px solid orange;
-} */
-
 /*  ********  ********  ********  ******** INDEX/HOME  ********  ******** ********  ********  */
 
 .towns {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  align-content: space-around;
-  /* flex-direction: column; */
+  flex-flow: row nowrap;
+  justify-content: space-around;
 }
-
-/* .needAClassForThis {
-  flex-basis: 30%;
-  max-width: 1100px;
-} */
 
 .firstTown, .secondTown, .thirdTown {
-  margin: 10px;
-  width: 25%;
-  background: #bdb196;
+  background: #afa07d;
   border: 3px solid silver;
-}
-
-.homeTownPreston, .homeTownSodaSprings, .homeTownFishHaven {
-  padding: 3px;
-  width: 95%;
-}
-
-.homePageImages:hover {
-  transform: scale(1.1);
-  /* box-shadow: 0px 0px 2px #B88A29; */
+  margin: 15px;
 }
 
 /****************** Media Quarry ******************/
 
 @media screen and (max-width: 560px) {
-  /* .forecast-pic {
-    display: none;
-  } */
   .weather-summary {
     display: none;
   }
@@ -249,8 +182,6 @@ form fieldset {
   .towns {
     display: flex;
     flex-direction: column;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
+    justify-content: stretch;
   }
 }

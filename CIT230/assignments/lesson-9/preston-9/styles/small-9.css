@@ -94,36 +94,37 @@ nav {
 } */
 
 nav li.active {
-  background-color:  #d44a16;
+  background-color: #d44a16;
 }
 
-/*  ********  ******** FORM ********  ********  */
-main div h1, fieldset legend{
+/*  ********  ********  ********  ******** FORM  ********  ******** ********  ********  */
+
+main div h1, fieldset legend {
   font-family: 'Alfa Slab One', cursive;
 }
 
-.formDiv{
+.formDiv {
   text-align: left;
   margin: 15px;
 }
 
-.formDiv input, .formDiv select, .formDiv output, .formDiv textarea, input datalist, #formRadioY, #formRadioM, #formRadioN, #rating{
+.formDiv input, .formDiv select, .formDiv output, .formDiv textarea, input datalist, #formRadioY, #formRadioM, #formRadioN, #rating {
   margin-left: 17em;
 }
 
-.formDiv label{
+.formDiv label {
   position: absolute;
   font-weight: bold;
   width: 250px;
   text-align: right;
 }
 
-#formSubmit{
+#formSubmit {
   margin: 5px;
   transform: scale(1.5);
 }
 
-.form{
+.form {
   clear: both;
   max-width: 40%;
   margin: auto;
@@ -131,24 +132,23 @@ main div h1, fieldset legend{
   background-color: #1C705E;
 }
 
-form fieldset{
+form fieldset {
   margin: width 40%;
   margin: 15px;
   border: 1.5px solid #b88a29;
 }
 
-#sliderVal{
+#sliderVal {
   /* display: inline-block; */
   font-weight: bold;
 }
 
-#formRadioY, #formRadioM, #formRadioN{
+#formRadioY, #formRadioM, #formRadioN {
   padding: 20px;
-  width: auto;  
+  width: auto;
   height: auto;
   display: inline-block;
 }
-
 
 /*
 .formDiv label{
@@ -186,35 +186,71 @@ form fieldset{
   border: 2px solid orange;
 } */
 
+/*  ********  ********  ********  ******** INDEX/HOME  ********  ******** ********  ********  */
+
+.towns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: space-around;
+  /* flex-direction: column; */
+}
+
+/* .needAClassForThis {
+  flex-basis: 30%;
+  max-width: 1100px;
+} */
+
+.firstTown, .secondTown, .thirdTown {
+  margin: 10px;
+  width: 25%;
+  background: #bdb196;
+  border: 3px solid silver;
+}
+
+.homeTownPreston, .homeTownSodaSprings, .homeTownFishHaven {
+  padding: 3px;
+  width: 95%;
+}
+
+.homePageImages:hover {
+  transform: scale(1.1);
+  /* box-shadow: 0px 0px 2px #B88A29; */
+}
+
 /****************** Media Quarry ******************/
 
 @media screen and (max-width: 560px) {
-
   /* .forecast-pic {
     display: none;
   } */
   .weather-summary {
     display: none;
   }
-
   .hide {
     display: none;
   }
-
   nav>button>ul>li {
     display: flex;
     flex-direction: column;
   }
-
   #gallery-images {
     display: grid;
     grid-template-columns: 1fr;
     grid-gap: 20px;
     align-content: center;
   }
-
   .gallery-pictures>img {
     width: 300px;
     height: auto;
+  }
+  /* ****************HOME**************** */
+  .towns {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
   }
 }

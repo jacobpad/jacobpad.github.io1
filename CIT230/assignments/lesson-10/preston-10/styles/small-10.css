@@ -6,6 +6,11 @@ FONTS:
     font-family: 'Alfa Slab One', cursive; h tags
 *******************************************/
 
+/*
+New Fonts
+font-family: 'Timmana', sans-serif;
+*/
+
 /******************************************
 COLOR SCHEME:
     #1C705E
@@ -71,30 +76,54 @@ nav {
   padding-bottom: 5px;
 }
 
-.forecast-pic {
-  width: 75%;
-  height: auto;
-  margin-top: 10px;
-  position: static;
+nav li.active {
+  background-color: #d44a16;
 }
 
-.weather-summary {
-  padding-bottom: 15px;
-  padding-right: 15px;
-  padding-left: 15px;
-  background-color: rgba(184, 138, 41, 0.3);
-  position: absolute;
-  left: 30%;
-  top: 19%;
+#iNeedADivHere {
+  display: inline-flex;
+}
+
+#weather-summary-container {
+  border: 2px solid rgba(255, 239, 54, 0.6);
+  border-radius: 25px 25px 25px 25px;
+  background-color: rgb(42, 109, 94, .6);
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  flex: 1;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
   z-index: 1;
+}
+
+#weather-forecast-container {
+  border: 2px solid rgba(255, 239, 54, 0.6);
+  border-radius: 25px 25px 25px 25px;
+  background-color: rgb(42, 109, 94, .6);
+  margin-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+  flex: 1;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.25rem;
+  z-index: 1;
+}
+
+.forecast-pic {
+  width: 65%;
+  height: auto;
+  margin-top: 1rem;
+  /* position: relative; */
 }
 
 .footer-date {
   font-size: .8rem;
-}
-
-nav li.active {
-  background-color: #d44a16;
+  text-align: center;
 }
 
 /* .main {
@@ -105,7 +134,7 @@ nav li.active {
 /*  ********  ********  ********  ******** FORM  ********  ******** ********  ********  */
 
 main div h1, fieldset legend {
-  font-family: 'Alfa Slab One', cursive;
+  font-family: 'Timmana', sans-serif;
 }
 
 .formDiv {
@@ -167,6 +196,16 @@ form fieldset {
   border: 3px solid silver;
   margin: 15px;
 }
+
+/****************** Gallery ******************/
+
+/* #gallery-images {
+  display: flex;
+}
+
+.gallery-pictures {
+  flex-basis: 40%;
+} */
 
 /****************** Media Quarry ******************/
 

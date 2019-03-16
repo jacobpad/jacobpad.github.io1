@@ -5,7 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|B612+Mono|Bungee|VT323" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|B612+Mono|Bungee|VT323" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small-10.css">
     <link rel="stylesheet" href="styles/medium-10.css">
@@ -36,7 +37,7 @@
 
     </header>
     <main class="main">
-        <div id="currentTemp">
+        <!-- <div id="currentTemp">
             <div>Temperature:
                 <span id="getTemp"></span>&deg;
             </div>
@@ -46,23 +47,50 @@
             <div>Wind Chill is:
                 <span id="windChill"></span>&deg;
             </div>
+        </div> -->
+        <div id="iNeedADivHere">
+            <div id="weather-summary-container">
+                <h2>Preston - Weather Summary</h2>
+                <div>Temperature: <span id="prestonCurrentTemperature"></span></div>
+                <div>Humidity: <span id="prestonCurrentHumidity"></span></div>
+                <div>Wind Speed: <span id="prestonCurrentWindSpeed"></span></div>
+                <div>Wind Chill: <span id="prestonCurrentWindChill"></span></div>
+                <!-- <div>Precipitation: <span id="prestonCurrentPrecipitation"></span></div> -->
+                <!-- <p>Raining: 41&#8457</p> -->
+            </div>
+            <div id="weather-forecast-container">
+                <h2>Preston - Weather Forecast</h2>
+                <table class="blueTable">
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th><span id="day1"></span></th>
+                            <th><span id="day2"></span></th>
+                            <th><span id="day3"></span></th>
+                            <th><span id="day4"></span></th>
+                            <th><span id="day5"></span></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td id="temp1"></td>
+                            <td id="temp2"></td>
+                            <td id="temp3"></td>
+                            <td id="temp4"></td>
+                            <td id="temp5"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
         <div>
-            <div>
+            <div id="homePicAndForecast">
                 <figure>
                     <img class="forecast-pic" src="../preston-10/" alt="preston-idaho" srcset="
                 ../preston-10/images/cit230_image_franklin_400.jpg 400w,
-                ../preston-10/images/cit230_image_franklin_1200.jpg 1200w
-                ">
+                ../preston-10/images/cit230_image_franklin_1200.jpg 1200w">
                     <figcaption>Preston Landscape</figcaption>
                 </figure>
-                <div>
-                    <div class="weather-summary">
-                        <h1>Preston</h1>
-                        <h3>Weather Summary</h3>
-                        <p>Raining: 41&#8457</p>
-                    </div>
-                </div>
             </div>
         </div>
         <article class="section4">
@@ -89,14 +117,15 @@
     </div>
     <footer>
         <h5>&#169;<span id="theCopyright-year"></span> | <a href="../../../index.html">Jacob Padgett</a> | <a
-                href="#">Terms of Use</a> | <a href="http://www.byui.edu">BYU-Idaho</a> | OpenWeatherMap
+                href="#">Terms of Use</a> | <a href="http://www.byui.edu">BYU-Idaho</a>
             <p class="footer-date">Current Date: <span id="displayCurrentDate"></span></p>
         </h5>
     </footer>
     <!-- <script src="scripts/copyright-year.js"></script> -->
     <script src="scripts/currentdate.js"></script>
     <script src="scripts/hamburger.js"></script>
-    <script src="scripts/windchill.js"></script>
+    <!-- <script src="scripts/windchill.js"></script> -->
+    <script src="scripts/weather.js"></script>
 </body>
 
 </html>

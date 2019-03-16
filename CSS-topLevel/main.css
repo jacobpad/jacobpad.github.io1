@@ -1,5 +1,4 @@
-
-        /*******************************************
+/*******************************************
         Available Fonts:
         https://fonts.google.com/selection?category=Display,Handwriting,Monospace&selection.family=Faster+One|Fondamento|Fruktur|Gaegu|Julee|Kirang+Haerang|Metal+Mania|Nosifer|Piedra|Redressed|Sirin+Stencil|Trade+Winds
             font-family: 'Faster One', cursive;
@@ -16,38 +15,50 @@
             font-family: 'Fruktur', cursive;
             Changing some things
         *******************************************/
-        body {
-            background-color: #dddddd;
-            margin: 1.25rem auto;
-            padding: .5rem;
-            max-width: 50%;
-        }
 
-        #name {
-            text-align: center;
-            font-size: 4.5em;
-            font-family: 'Metal Mania', cursive;
-            color: #FFFFFF;
-            /* background: #333333; */
-            text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
-            color: #FFFFFF;
-            /* background: #333333; */
-        }
+html {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(94, 87, 30), #000);
+}
 
-        #cit230 {
-            font-size: 2em;
-            text-align: center;
-            font-family: 'Trade Winds', cursive;
-        }
+body {
+    margin: 5%;
+    padding: 5%;
+}
 
-        #otherProjects {
-            font-size: 2em;
-            text-align: center;
-            font-family: 'Nosifer', cursive;
-            /* font-family: 'Trade Winds', cursive;
-            background: rgb(65, 67, 164);
-            background: -moz-linear-gradient(top, rgb(65, 67, 164) 0%, rgb(35, 136, 203) 63%, rgb(80, 93, 117) 100%);
-            background: -webkit-linear-gradient(top, rgb(65, 67, 164) 0%, rgb(35, 136, 203) 63%, rgb(80, 93, 117) 100%);
-            background: linear-gradient(to bottom, rgb(65, 67, 164) 0%, rgb(35, 136, 203) 63%, rgb(80, 93, 117) 100%); */
-        }
-        
+#name {
+    text-align: center;
+    font-size: 4.5em;
+    font-family: 'Metal Mania', cursive;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    color: #FFFFFF;
+    animation: yourAnimation 5s forwards 0s ease;
+}
+
+@keyframes yourAnimation {
+    0% {
+        transform: rotate(0) scale(0.2) translateX(100px) translateY(-30%) skewX(0) skewY(5deg);
+        transform-origin: 50% 50%;
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0) scale(1.5) translateX(0px) translateY(0) skewX(0) skewY(0deg);
+        transform-origin: 50% 50%;
+        opacity: 1;
+    }
+}
+
+#cit230 {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Trade Winds', cursive;
+    padding: 5.5%;
+}
+
+#otherProjects {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Nosifer', cursive;
+}

@@ -5,7 +5,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One|B612+Mono|Bungee|VT323" rel="stylesheet"> -->
     <link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/small-10.css">
@@ -37,50 +36,42 @@
 
     </header>
     <main class="main">
-        <!-- <div id="currentTemp">
-            <div>Temperature:
-                <span id="getTemp"></span>&deg;
-            </div>
-            <div>Wind Speed:
-                <span id="currentWindSpeed"></span>mph
-            </div>
-            <div>Wind Chill is:
-                <span id="windChill"></span>&deg;
-            </div>
-        </div> -->
         <div id="iNeedADivHere">
             <div id="weather-summary-container">
                 <h2>Preston - Weather Summary</h2>
-                <div>Temperature: <span id="prestonCurrentTemperature"></span></div>
-                <div>Humidity: <span id="prestonCurrentHumidity"></span></div>
-                <div>Wind Speed: <span id="prestonCurrentWindSpeed"></span></div>
-                <div>Wind Chill: <span id="prestonCurrentWindChill"></span></div>
-                <!-- <div>Precipitation: <span id="prestonCurrentPrecipitation"></span></div> -->
-                <!-- <p>Raining: 41&#8457</p> -->
+                <div id="prestonCurrentTemperatureDiv">Temperature: <span id="prestonCurrentTemperature"></span></div>
+                <div id="prestonCurrentHumidityDiv">Humidity: <span id="prestonCurrentHumidity"></span></div>
+                <div id="prestonCurrentWindSpeedDiv">Wind Speed: <span id="prestonCurrentWindSpeed"></span></div>
+                <div id="prestonCurrentWindChillDiv">Wind Chill: <span id="prestonCurrentWindChill"></span></div>
             </div>
             <div id="weather-forecast-container">
                 <h2>Preston - Weather Forecast</h2>
-                <table class="blueTable">
-                    <thead>
-                        <tr>
-                            <th>Day</th>
-                            <th><span id="day1"></span></th>
-                            <th><span id="day2"></span></th>
-                            <th><span id="day3"></span></th>
-                            <th><span id="day4"></span></th>
-                            <th><span id="day5"></span></th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td id="temp1"></td>
-                            <td id="temp2"></td>
-                            <td id="temp3"></td>
-                            <td id="temp4"></td>
-                            <td id="temp5"></td>
-                        </tr>
-                    </tbody>
-                </table>
+                <div class=forecast>
+                    <section id="forecasttable">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Day</th>
+                                    <th id="day0"></th>
+                                    <th id="day1"></th>
+                                    <th id="day2"></th>
+                                    <th id="day3"></th>
+                                    <th id="day4"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr id=high-temps>
+                                    <td>High</td>
+                                    <td id="high0"></td>
+                                    <td id="high1"></td>
+                                    <td id="high2"></td>
+                                    <td id="high3"></td>
+                                    <td id="high4"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </section>
+                </div>
             </div>
         </div>
         <div>

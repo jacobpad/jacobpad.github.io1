@@ -97,6 +97,7 @@ nav li.active {
   font-weight: bold;
   font-size: 1.25rem;
   z-index: 1;
+  margin-right: 5%;
 }
 
 #weather-forecast-container {
@@ -112,13 +113,13 @@ nav li.active {
   font-weight: bold;
   font-size: 1.25rem;
   z-index: 1;
+  margin-left: 5%;
 }
 
 .forecast-pic {
   width: 65%;
   height: auto;
   margin-top: 1rem;
-  /* position: relative; */
 }
 
 .footer-date {
@@ -126,12 +127,13 @@ nav li.active {
   text-align: center;
 }
 
-/* .main {
-  display: flex;
-  flex-basis: 80%;
-} */
+/********************* PRESTON FORECAST TABLE *********************/
 
-/*  ********  ********  ********  ******** FORM  ********  ******** ********  ********  */
+#high-temps {
+  border: 2px solid blue;
+}
+
+/********************* FORM  *********************/
 
 main div h1, fieldset legend {
   font-family: 'Timmana', sans-serif;
@@ -183,7 +185,7 @@ form fieldset {
   display: inline-block;
 }
 
-/*  ********  ********  ********  ******** INDEX/HOME  ********  ******** ********  ********  */
+/********************* INDEX/HOME  *********************/
 
 .towns {
   display: flex;
@@ -197,7 +199,7 @@ form fieldset {
   margin: 15px;
 }
 
-/****************** Gallery ******************/
+/********************* Gallery *********************/
 
 /* #gallery-images {
   display: flex;
@@ -207,7 +209,7 @@ form fieldset {
   flex-basis: 40%;
 } */
 
-/****************** Media Quarry ******************/
+/****************************************** Media Quarry ******************************************/
 
 @media screen and (max-width: 560px) {
   .weather-summary {
@@ -216,14 +218,17 @@ form fieldset {
   .hide {
     display: none;
   }
-  nav>button>ul>li {
-    position: absolute;
-    display: inline-block;
-    text-decoration: none;
+  nav>button>ul {
+    /* position: absolute; */
+    display: block;
     min-width: 230px;
     overflow: auto;
     border: 1px solid #ddd;
     z-index: 1;
+  }
+  .menu a {
+    display: block;
+    text-decoration: none;
   }
   #gallery-images {
     display: grid;
@@ -235,10 +240,27 @@ form fieldset {
     width: 300px;
     height: auto;
   }
-  /* ****************HOME**************** */
+  /********************* HOME *********************/
   .towns {
     display: flex;
     flex-direction: column;
     justify-content: stretch;
+  }
+  /********************* PRESTON FORECAST TABLE *********************/
+  #weather-forecast-container {
+    display: none;
+  }
+  /********************* PRESTON WEATHER SUMMARY *********************/
+  #weather-summary-container>h2 {
+    font-size: 1rem;
+  }
+  #prestonCurrentHumidityDiv, #prestonCurrentWindSpeedDiv, #prestonCurrentWindChillDiv {
+    display: none;
+  }
+  #prestonCurrentTemperatureDiv {
+    font-size: 0rem;
+  }
+  #prestonCurrentTemperature {
+    font-size: .95rem;
   }
 }

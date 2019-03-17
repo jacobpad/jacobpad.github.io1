@@ -1,4 +1,4 @@
-/********** PRESTON CURRENT WEATHER**********/
+/******************** PRESTON CURRENT WEATHER********************/
 var apiURLstring = 'https://api.openweathermap.org/data/2.5/weather?id=5604473&APPID=2e107688d57075d314ca40a4c101e340&units=imperial';
 
 var weatherRequest = new XMLHttpRequest();
@@ -20,52 +20,77 @@ weatherRequest.onload = function () {
      document.getElementById("prestonCurrentWindChill").innerHTML = windChill.toFixed(1) + "&#8457";
 }
 
-// /********** PRESTON FORECAST **********/
-// var apiURLstring = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&APPID=2e107688d57075d314ca40a4c101e340&units=imperial';
+/******************** PRESTON FORECAST ********************/
+var forecastRequestURL = 'https://api.openweathermap.org/data/2.5/forecast?id=5604473&APPID=2e107688d57075d314ca40a4c101e340&units=imperial';
+var forecastRequest = new XMLHttpRequest();
+forecastRequest.open('GET', forecastRequestURL);
+forecastRequest.responseType = 'json';
+forecastRequest.send();
 
-// var weatherRequest = new XMLHttpRequest();
+forecastRequest.onload = function () {
+     var forecastData = forecastRequest.response;
+     showForecast(forecastData);
+}
 
-// weatherRequest.open('GET', apiURLstring, true);
-// weatherRequest.responseType = 'json';
-// weatherRequest.send();
+function showCurrWeather(currWeatherData) {
+     var weatherArticle = document.querySelector(".weather");
+     var weatherH3 = document.createElement("h3");
+     var weatherCurr = document.createElement("p");
+     var weatherTemp = document.createElement("p");
+     var weatherHumidity = document.createElement("p");
+     var weatherWind = document.createElement("p");
 
-// weatherRequest.onload = function () {
-//      var forecastInfo = JSON.parse(forecastRequest.responseText);
-//      /* json information */
-//      console.log(forecastInfo);
-//      /* placing the days of the week in the table head */
-//      var d = new Date();
-//      /* define the days of the week */
-//      var weekday = new Array(7);
-//      weekday[0] = "Sun";
-//      weekday[1] = "Mon";
-//      weekday[2] = "Tue";
-//      weekday[3] = "Wed";
-//      weekday[4] = "Thu";
-//      weekday[5] = "Fri";
-//      weekday[6] = "Sat";
-//      weekday[7] = "Sun";
-//      weekday[8] = "Mon";
-//      weekday[9] = "Tue";
-//      weekday[10] = "Wed";
-//      weekday[11] = "Thu";
-//      weekday[12] = "Fri";
-//      weekday[13] = "Sat";
-//      /* create the five day sequence */
-//      var one = weekday[d.getDay()];
-//      document.getElementById('day1').innerHTML = one;
-//      var two = weekday[d.getDay() + 1];
-//      document.getElementById('day2').innerHTML = two;
-//      var three = weekday[d.getDay() + 2];
-//      document.getElementById('day3').innerHTML = three;
-//      var four = weekday[d.getDay() + 3];
-//      document.getElementById('day4').innerHTML = four;
-//      var five = weekday[d.getDay() + 4];
-//      document.getElementById('day5').innerHTML = five;
-//      /* placing the data forecast in the table data */
-//      document.getElementById('temp1').innerHTML = forecastInfo.list[0].main.temp_max.toFixed(0);
-//      document.getElementById('temp2').innerHTML = forecastInfo.list[8].main.temp_max.toFixed(0);
-//      document.getElementById('temp3').innerHTML = forecastInfo.list[16].main.temp_max.toFixed(0);
-//      document.getElementById('temp4').innerHTML = forecastInfo.list[24].main.temp_max.toFixed(0);
-//      document.getElementById('temp5').innerHTML = forecastInfo.list[32].main.temp_max.toFixed(0);
-// }
+     weatherH3.textContent = 'Weather Summary';
+     weatherCurr.textContent = 'Currently: ' + currWeatherData.weather[0].main;
+     weatherTemp.textContent = 'Temperature: ' + currWeatherData.main.temp.toFixed(1) + "&#8457";
+     weatherHumidity.textContent = 'Humidity: ' + currWeatherData.main.humidity.toFixed(1) + "%";
+     weatherWind.textContent = 'Wind: ' + currWeatherData.wind.speed.toFixed(1) + " mph";
+
+     weatherArticle.appendChild(weatherH3);
+     weatherArticle.appendChild(weatherCurr);
+     weatherArticle.appendChild(weatherTemp);
+     weatherArticle.appendChild(weatherHumidity);
+     weatherArticle.appendChild(weatherWind);
+}
+
+function showForecast(forecastData) {
+     var rgex = /[0-9 :]21:00:00/
+     var i = -1;
+     do {
+          i++;
+     }
+     while (!rgex.test(forecastData.list[i].dt_txt));
+
+     var fcstDaysArr = [];
+     var fcstHighArr = [];
+     for (var j = 0; j < 5; j++) {
+          fcstDaysArr[j] = getFcstDay(j);
+          fcstHighArr[j] = forecastData.list[i].main.temp;
+          i += 8;
+     }
+
+     document.getElementById('day0').innerHTML = fcstDaysArr[0];
+     document.getElementById('high0').innerHTML = fcstHighArr[0].toFixed(1) + "&#8457";
+     document.getElementById('day1').innerHTML = fcstDaysArr[1];
+     document.getElementById('high1').innerHTML = fcstHighArr[1].toFixed(1) + "&#8457";
+     document.getElementById('day2').innerHTML = fcstDaysArr[2];
+     document.getElementById('high2').innerHTML = fcstHighArr[2].toFixed(1) + "&#8457";
+     document.getElementById('day3').innerHTML = fcstDaysArr[3];
+     document.getElementById('high3').innerHTML = fcstHighArr[3].toFixed(1) + "&#8457";
+     document.getElementById('day4').innerHTML = fcstDaysArr[4];
+     document.getElementById('high4').innerHTML = fcstHighArr[4].toFixed(1) + "&#8457";
+
+     function getFcstDay(day) {
+          now = new Date();
+          today = now.getUTCDay() + day;
+          if (today >= 7) today = today - 7;
+          if (today == 0) return "Sun";
+          else if (today == 1) return "Mon";
+          else if (today == 2) return "Tue";
+          else if (today == 3) return "Wed";
+          else if (today == 4) return "Thu";
+          else if (today == 5) return "Fri";
+          else return "Sat";
+     }
+
+}

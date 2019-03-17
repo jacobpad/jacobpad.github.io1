@@ -31,18 +31,20 @@
      .hide {
           display: block;
      }
-     
      #gallery-images {
           display: grid;
-          grid-template-columns: 1fr 1fr ;
+          grid-template-columns: 1fr 1fr;
           grid-template-rows: 1fr 1fr 1fr;
           grid-gap: 20px;
           align-content: center;
           border-style: dotted;
      }
-
      .gallery-pictures>img {
           width: 200px;
           height: auto;
+     }
+     /********************* PRESTON FORECAST TABLE *********************/
+     #weather-forecast-container {
+          display: none;
      }
 }

@@ -296,4 +296,16 @@ form fieldset {
   #currentTemperature {
     font-size: .95rem;
   }
+  /********************* STORM CENTER *********************/
+  #mobileFriendly {
+    clear: both;
+    background-color: chartreuse;
+    max-width: 90%;
+    margin-bottom: 20px;
+  }
+  .formDiv {
+    display: block;
+    max-width: 80%;
+    text-align: left;
+  }
 }

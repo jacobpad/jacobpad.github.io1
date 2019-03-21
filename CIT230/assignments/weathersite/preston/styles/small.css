@@ -37,11 +37,14 @@ body {
 
 .site-logo {
   display: flex;
+  height: 175px;
+  width: auto;
 }
 
-/* #site-name {
-  
-} */
+.map {
+  width: 450px;
+  height: 300px;
+}
 
 .some-random-class {
   display: flex;
@@ -50,7 +53,7 @@ body {
 
 img {
   height: 175px;
-  width: auto;
+  width: 250px;
 }
 
 ul {
@@ -91,7 +94,7 @@ nav li.active {
 #weather-summary-container {
   border: 2px solid rgba(255, 239, 54, 0.6);
   border-radius: 25px 25px 25px 25px;
-  background-color: rgb(42, 109, 94, .6);
+  background-color: rgb(28, 112, 94, .7);
   margin-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-right: 1.5rem;
@@ -107,7 +110,7 @@ nav li.active {
 #weather-forecast-container {
   border: 2px solid rgba(255, 239, 54, 0.6);
   border-radius: 25px 25px 25px 25px;
-  background-color: rgb(42, 109, 94, .6);
+  background-color: rgb(28, 112, 94, .7);
   margin-top: 1.5rem;
   padding-bottom: 1.5rem;
   padding-right: 1.5rem;
@@ -133,8 +136,8 @@ nav li.active {
 
 /********************* PRESTON FORECAST TABLE *********************/
 
-#high-temps {
-  border: 2px solid blue;
+.forecastCredit {
+  font-size: .9rem;
 }
 
 /********************* FORM  *********************/
@@ -202,7 +205,7 @@ form fieldset {
 }
 
 .firstTown, .secondTown, .thirdTown {
-  background: #afa07d;
+  background: rgb(28, 112, 94, .7);
   border: 3px solid silver;
   margin: 3px;
   width: 370px;
@@ -221,19 +224,34 @@ form fieldset {
 /****************************************** Media Quarry ******************************************/
 
 @media screen and (max-width: 560px) {
+  .site-logo {
+    width: 150px;
+    height: 150px;
+  }
+  .map {
+    width: 300px;
+    height: 175px;
+    padding: 12px;
+  }
   .weather-summary {
     display: none;
   }
   .hide {
     display: none;
   }
-  nav>button>ul {
-    /* position: absolute; */
-    display: block;
-    min-width: 230px;
+  nav>ul {
+    display: flex;
+    flex-direction: column;
+    min-width: 150px;
     overflow: auto;
     border: 1px solid #ddd;
     z-index: 1;
+    padding: 8px;
+    background-color: chocolate;
+  }
+  li {
+    padding: 8px;
+    text-decoration: none;
   }
   .menu a {
     display: block;

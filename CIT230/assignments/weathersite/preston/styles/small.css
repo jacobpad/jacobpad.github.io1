@@ -299,7 +299,7 @@ form fieldset {
   /********************* STORM CENTER *********************/
   #mobileFriendly {
     clear: both;
-    background-color: chartreuse;
+    background-color: rgb(110, 128, 93);
     max-width: 90%;
     margin-bottom: 20px;
   }

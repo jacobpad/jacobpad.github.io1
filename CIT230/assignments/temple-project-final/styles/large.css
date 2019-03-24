@@ -1,0 +1,45 @@
+@media screen and (min-width: 1220px) {
+     ul {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+          overflow: hidden;
+          background-color: #2085c1;
+     }
+     li {
+          display: inline-block;
+     }
+     li a {
+          display: block;
+          color: white;
+          text-align: center;
+          padding: 15px;
+          text-decoration: none;
+     }
+     li a:hover {
+          transition-delay: 225ms;
+          color: #000;
+          background-color: #62b4f4;
+     }
+     nav {
+          padding: 0;
+          margin: 0;
+     }
+     nav li.active {
+          background-color: #62b4f4;
+     }
+     .menu {
+          display: none;
+     }
+     .hide {
+          display: block;
+     }
+     .menuNav {
+          padding-left: 15px;
+          padding-right: 15px;
+     }
+     main {
+          max-width: 1250px;
+          margin: 30px;
+     }
+}

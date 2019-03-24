@@ -57,8 +57,18 @@ body {
     padding: 5.5%;
 }
 
+#cit230Link {
+    text-decoration: none;
+    color: #eae0c8;
+}
+
 #otherProjects {
     font-size: 2em;
     text-align: center;
     font-family: 'Nosifer', cursive;
+}
+
+#otherProjectsLink {
+    text-decoration: none;
+    color: #eae0c8;
 }

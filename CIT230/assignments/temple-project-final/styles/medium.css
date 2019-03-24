@@ -1,0 +1,9 @@
+@media screen and (min-width: 561px) and (max-width: 1219px) {
+     .hide {
+          display: none;
+     }
+     .menu a {
+          display: block;
+          text-decoration: none;
+     }
+}

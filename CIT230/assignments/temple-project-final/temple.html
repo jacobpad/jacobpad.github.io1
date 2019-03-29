@@ -5,23 +5,111 @@
      <meta charset="UTF-8">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <meta http-equiv="X-UA-Compatible" content="ie=edge">
-     <title>Document</title>
+     <link href="https://fonts.googleapis.com/css?family=Caveat+Brush|Cinzel|Cinzel+Decorative|Gentium+Book+Basic|Permanent+Marker"
+          rel="stylesheet">
+     <title>Temple | The Temple Inn & Suites</title>
+     <link rel="stylesheet" href="styles/normalize.css">
+     <link rel="stylesheet" href="styles/small.css">
+     <link rel="stylesheet" href="styles/medium.css">
+     <link rel="stylesheet" href="styles/large.css">
 </head>
 
 <body>
      <header>
-          <h1>nav</h1>
+          <div class="some-random-class">
+               <img id="logo-pic-large-screen" src="images/temple-inn-logo-261x350-noBackground.png" alt="logo">
+               <h1 class="site-name">The Temple Inn & Suites</h1>
+          </div>
+          <nav>
+               <button onclick="toggleMenu()" class="menu">🍔Menu</button>
+               <ul id="menu" class="hide">
+                    <li class="menuNav"><a href="index.html">Home</a></li>
+                    <li class="active menuNav"><a href="temple.html">Temples</a></li>
+                    <li class="menuNav"><a href="reservation.html">Reservation</a></li>
+                    <li class="menuNav"><a href="services.html">Specialized Services</a></li>
+                    <!-- <li class="menuNav"><a href="thanks.html">Thanks</a></li> -->
+                    <li class="menuNav"><a href="contact.html">Contact Us</a></li>
+               </ul>
+               <ul>
+                    <li id="contact">1 (555) TSuites</li>
+               </ul>
+          </nav>
      </header>
-
      <main>
-          <ul>
-               <li></li>
-          </ul>
+          <div id="fourTemplesSection">
+               <section id="templeOne-BountifulUtah">
+                    <h1 class="indexIntro">Bountiful Utah</h1>
+                    <section class="introInfo">
+                         <p>Current temperature: <span id="bountiful-utah-current-temp"></span></p>
+                    </section>
+                    <figure class="figOfImg">
+                         <img class="temple-page-image"
+                              src="images/temples/resized/four-temples/bountiful-temple-large.jpg" alt="Bountiful, Utah"
+                              srcset="">
+                         <figcaption><a
+                                   href="https://www.lds.org/temples/details/bountiful-utah-temple?lang=eng">Bountiful,
+                                   Utah Temple</a>
+                         </figcaption>
+                    </figure>
+               </section>
+               <section id="templeTwo-GilbertArizona">
+                    <h1 class="indexIntro">Gilbert Arizona</h1>
+                    <section class="introInfo">
+                         <p>Current temperature: <span id="gilbert-arizona-current-temp"></span>
+                         </p>
+                    </section>
+                    <figure class="figOfImg">
+                         <img class="temple-page-image"
+                              src="images/temples/resized/four-temples/gilbert-arizona-temple-large.jpg"
+                              alt="Gilbert, Arizona" srcset="">
+                         <figcaption><a
+                                   href="https://www.lds.org/temples/details/gilbert-arizona-temple?lang=eng">Gilbert,
+                                   Arizona Temple</a>
+                         </figcaption>
+                    </figure>
+               </section>
+               <section id="templeThree-ParisFrance">
+                    <h1 class="indexIntro">Paris France</h1>
+                    <section class="introInfo">
+                         <p>Current temperature: <span id="paris-france-current-temp"></span></p>
+                    </section>
+                    <figure class="figOfImg">
+                         <img class="temple-page-image" src="images/temples/resized/four-temples/paris-temple-large.jpg"
+                              alt="Paris, France" srcset="">
+                         <figcaption><a href="https://www.lds.org/temples/details/paris-france-temple?lang=eng">Paris,
+                                   France Temple</a>
+                         </figcaption>
+                    </figure>
+               </section>
+               <section id="templeFour-PrestonEngland">
+                    <h1 class="indexIntro">Preston England</h1>
+                    <section class="introInfo">
+                         <p>Current temperature: <span id="preston-england-current-temp"></span>
+                         </p>
+                    </section>
+                    <figure class="figOfImg">
+                         <img class="temple-page-image"
+                              src="images/temples/resized/four-temples/preston-temple-large.jpg" alt="Preston, England"
+                              srcset="">
+                         <figcaption><a
+                                   href="https://www.lds.org/temples/details/preston-england-temple?lang=eng">Preston,
+                                   England Temple</a>
+                         </figcaption>
+                    </figure>
+               </section>
+          </div>
      </main>
 
      <footer>
-
+          <h3>&#169;<span id="theCopyright-year"></span> | <a href="https://jacobpad.github.io"> Jacob Padgett</a> |
+               Temple Inn & Suites</h3>
      </footer>
+     <script src="scripts/temples.json"></script>
+     <script src="scripts/hamburger.js"></script>
+     <script src="scripts/copyright-year.js"></script>
+     <script src="scripts/temple-temps.js"></script>
+     <script src="scripts/closure.js"></script>
+     <!-- <script src="scripts/gilbert-arizona-temple.js"></script> -->
 </body>
 
 </html>

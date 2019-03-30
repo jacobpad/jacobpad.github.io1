@@ -1,14 +1,14 @@
 /********** BOUNTIFUL UTAH TEMPLE CURRENT WEATHER**********/
-var apiURLstring = 'https://api.openweathermap.org/data/2.5/weather?q=bountiful,usa&APPID=2e107688d57075d314ca40a4c101e340&units=imperial';
+var bAPIurlString = 'https://api.openweathermap.org/data/2.5/weather?q=bountiful,usa&APPID=2e107688d57075d314ca40a4c101e340&units=imperial';
 
-var weatherRequest = new XMLHttpRequest();
+var bWeatherRequest = new XMLHttpRequest();
 
-weatherRequest.open('GET', apiURLstring, true);
-weatherRequest.responseType = 'json';
-weatherRequest.send();
+bWeatherRequest.open('GET', bAPIurlString, true);
+bWeatherRequest.responseType = 'json';
+bWeatherRequest.send();
 
-weatherRequest.onload = function () {
-     var weatherData = weatherRequest.response;
+bWeatherRequest.onload = function () {
+     var weatherData = bWeatherRequest.response;
      document.getElementById("bountiful-utah-current-temp").innerHTML = weatherData.main.temp.toFixed(1) + "&#8457";
 }
 

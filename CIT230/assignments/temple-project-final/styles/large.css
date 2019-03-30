@@ -45,5 +45,6 @@
           grid-template-rows: 1fr 1fr;
           grid-gap: 30px;
           margin: auto;
+          justify-items: center;
      }
 }

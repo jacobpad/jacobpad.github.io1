@@ -1,48 +1,31 @@
 /****************************** FONT FAMILY *****************************/
 
-/* #logo1 { */
+#logo1 {
+     font-family: 'Cinzel Decorative', cursive;
+     /*void it*/
+     font-size: 3rem;
+}
 
-/* font-family: 'Cinzel Decorative', cursive; */
+#logo2 {
+     font-family: 'Cinzel', serif;
+     /*logo*/
+     font-size: 3rem;
+}
 
-/*void it*/
+#logo3 {
+     font-family: 'Gentium Book Basic', serif;
+     font-size: 3rem;
+}
 
-/* font-size: 3rem; */
+#logo4 {
+     font-family: 'Permanent Marker', cursive;
+     font-size: 3rem;
+}
 
-/* } */
-
-/* #logo2 { */
-
-/* font-family: 'Cinzel', serif; */
-
-/*logo*/
-
-/* font-size: 3rem; */
-
-/* } */
-
-/* #logo3 { */
-
-/* font-family: 'Gentium Book Basic', serif; */
-
-/* font-size: 3rem; */
-
-/* } */
-
-/* #logo4 { */
-
-/* font-family: 'Permanent Marker', cursive; */
-
-/* font-size: 3rem; */
-
-/* } */
-
-/* #logo5 { */
-
-/* font-family: 'Caveat Brush', cursive; */
-
-/* font-size: 3rem; */
-
-/* } */
+#logo5 {
+     font-family: 'Caveat Brush', cursive;
+     font-size: 3rem;
+}
 
 /************************************************************************/
 

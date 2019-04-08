@@ -30,7 +30,7 @@
 /************************************************************************/
 
 html {
-     width: auto;
+     width: 100%;
 }
 
 body {
@@ -142,12 +142,11 @@ figcaption {
 }
 
 .home-page-image {
-     width: 400px;
+     width: 90%;
      height: auto;
      box-shadow: 0px 5px 30px 7px rgba(0, 0, 0, 0.9);
      border-radius: .4em;
      margin: 0px 0px 0px 0px;
-     float: left;
 }
 
 #sdTempleFigCaption {
@@ -252,7 +251,9 @@ figcaption {
 }
 
 .sssuuubbbmmmiiittt {
-     padding-top: 70px;
+     padding-top: 50px;
+     margin-left: 50px;
+     margin-bottom: 50px;
 }
 
 #formSubmit {
@@ -281,6 +282,10 @@ figcaption {
      display: flex;
      width: 96%;
      flex-direction: column;
+}
+
+body {
+     margin: 5%;
 }
 
 /************************************************************************/
@@ -327,5 +332,27 @@ footer>h3 {
      }
      img {
           width: 310px;
+     }
+     .site-name {
+          display: none;
+     }
+     #some-random-class {
+          display: grid;
+     }
+     img #logo-pic-large-screen {
+          justify-self: center;
+          justify-content: space-around;
+     }
+     .some-random-class {
+          display: flex;
+     }
+     .temple-page-image {
+          width: 90%;
+     }
+     #fourTemplesSection {
+          font-size: 1rem;
+     }
+     .bookNowButton {
+          clear: both;
      }
 }

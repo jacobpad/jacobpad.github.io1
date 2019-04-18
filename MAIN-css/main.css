@@ -1,0 +1,111 @@
+/*******************************************
+        Available Fonts:
+        https://fonts.google.com/selection?category=Display,Handwriting,Monospace&selection.family=Faster+One|Fondamento|Fruktur|Gaegu|Julee|Kirang+Haerang|Metal+Mania|Nosifer|Piedra|Redressed|Sirin+Stencil|Trade+Winds
+            font-family: 'Faster One', cursive;
+            font-family: 'Fondamento', cursive;
+            font-family: 'Nosifer', cursive;
+            font-family: 'Trade Winds', cursive;
+            font-family: 'Redressed', cursive;
+            font-family: 'Julee', cursive;
+            font-family: 'Gaegu', cursive;
+            font-family: 'Kirang Haerang', cursive;
+            font-family: 'Metal Mania', cursive;
+            font-family: 'Piedra', cursive;
+            font-family: 'Sirin Stencil', cursive;
+            font-family: 'Fruktur', cursive;
+            Changing some things
+        *******************************************/
+
+html {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(rgb(94, 87, 30), #000);
+}
+
+.whole-page {
+    display: grid;
+    grid-template-columns: 15% 1fr 1fr 1fr 1fr 3fr 1fr 1fr 1fr 1fr 15%;
+    grid-template-rows: 5% 1fr 1.5fr auto 1fr 1fr 1fr 1fr 1fr 1fr 5%;
+    grid-gap: .25%;
+}
+
+#name {
+    grid-column: 3/10;
+    grid-row-start: 2;
+    justify-self: center;
+    text-align: center;
+    font-size: 4.5rem;
+    font-family: 'Metal Mania', cursive;
+    color: #FFFFFF;
+    text-shadow: 0 -1px 4px #FFF, 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
+    color: #FFFFFF;
+    animation: yourAnimation 5s forwards 0s ease;
+}
+
+@keyframes yourAnimation {
+    0% {
+        transform: rotate(0) scale(0.2) translateX(100px) translateY(-30%) skewX(0) skewY(5deg);
+        transform-origin: 100% -100%;
+        opacity: 0;
+    }
+    100% {
+        transform: rotate(0) scale(1) translateX(0px) translateY(0) skewX(0) skewY(0deg);
+        transform-origin: 50% 50%;
+        opacity: 1;
+    }
+}
+
+#cit230 {
+    grid-column: 3/10;
+    grid-row-start: 4;
+    font-size: 1.5rem;
+    text-align: center;
+    font-family: 'Trade Winds', cursive;
+}
+
+#cit230:hover {
+    animation-duration: 3s;
+    animation-iteration-count: initial;
+    animation-name: cit230;
+    animation-timing-function: cubic-bezier(0.280, 0.840, 0.420, 1);
+}
+
+@keyframes cit230 {
+    0% {
+        transform: scale(1, 1) translateY(0);
+    }
+    10% {
+        transform: scale(1.1, .9) translateY(0);
+    }
+    30% {
+        transform: scale(1.5, 2.1) translateY(-70px);
+    }
+    50% {
+        transform: scale(1.75, 2.5) translateY(-50);
+    }
+    57% {
+        transform: scale(1.5, 1) translateY(-7px);
+    }
+    64% {
+        transform: scale(1.25, 1) translateY(0);
+    }
+    100% {
+        transform: scale(1, 1) translateY(0);
+    }
+}
+
+#cit230Link {
+    text-decoration: none;
+    color: #eae0c8;
+}
+
+#otherProjects {
+    font-size: 2em;
+    text-align: center;
+    font-family: 'Nosifer', cursive;
+}
+
+#otherProjectsLink {
+    text-decoration: none;
+    color: #eae0c8;
+}

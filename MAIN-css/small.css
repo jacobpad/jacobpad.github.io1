@@ -51,14 +51,14 @@ body {
      }
 }
 
-#cit230 {
+.classNum {
      font-size: 2em;
      text-align: center;
      font-family: 'Trade Winds', cursive;
      padding: 5.5%;
 }
 
-#cit230Link {
+.classLink {
      text-decoration: none;
      color: #eae0c8;
 }

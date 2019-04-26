@@ -1,0 +1,51 @@
+<!DOCTYPE html5>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Note It</title>
+     <script>
+          function saveNote() {
+               var currentDateAndTime = new Date();
+               console.log(currentDateAndTime);
+               var aNoteDescription = document.getElementById("description_input").value;
+               var aNoteText = document.getElementById("note_editor").value;
+               var aCompleteNote = currentDateAndTime.toLocaleString + " -- " + aNoteDescription;
+               aCompleteNote += "<p>" + aNoteText + "</p>";
+
+
+               // BELOW, WHERE DID ALL_NOTES COME FROM? P.72
+               var storedNotesString = localStorage.getItem("all_notes");
+
+
+               var allNotes = JSON.parse(storedNotesString);
+               if (allNotes == null) {
+                    allNotes = [];
+               }
+               allNotes.push(aCompleteNote);
+               var allNotesString = JSON.stringify(allNotes);
+               // console.log(aCompleteNote);
+               localStorage.setItem("all_notes", allNotesString);
+          }
+     </script>
+     <style>
+          body {
+               text-align: center;
+               background-color: rgb(105, 101, 101);
+          }
+     </style>
+</head>
+
+<body>
+     <section id="note_entry_area">
+          <h1>Note It!</h1>
+          Description: <input id="description_input"></input>
+          <textarea id="note_editor" placeholder="Note it down. Don't forget."></textarea>
+          <button onclick="saveNote()">Save</button>
+     </section>
+     <section id="all_notes_display"></section>
+</body>
+
+</html>

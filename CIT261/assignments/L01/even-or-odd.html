@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Even or Odd</title>
+     <script>
+          function checkNumber() {
+               var num = document.getElementById("num_input").value;
+               var aNum = parseInt(num);
+               if (num != "" && !isNaN(aNum)) {
+                    var remainder = Math.abs(aNum % 2);
+                    if (remainder == 0 && num != 0) {
+                         document.getElementById("display_result").innerHTML = num + " is even!";
+                    }
+                    // I'm a bit confused by the following ELSE IF code from page 51
+                    else if (num != 0 && remainder == 1) {
+                         document.getElementById("display_result").innerHTML = num + " is odd!";
+                    }
+                    else {
+                         document.getElementById("display_result").innerHTML = num + " is neither even nor odd.";
+                    }
+               }
+               else {
+                    document.getElementById("display_result").innerHTML = " Please enter a number.";
+               }
+          }
+     </script>
+     <style>
+          body {
+               text-align: center;
+               background-color: lightgrey;
+          }
+
+          input {
+               border: none;
+               border-radius: 5px;
+               box-shadow: 0px 0px 5px #666666 inset;
+               height: 25px;
+               width: 200px;
+               text-indent: 5px;
+          }
+     </style>
+</head>
+
+<body>
+     <h1>Even or Odd?</h1>
+     Enter a number <br> <input id="num_input"></input><br>
+     <button onclick="checkNumber()">Check It!</button><br>
+     <section id="display_result"></section>
+</body>
+
+</html>

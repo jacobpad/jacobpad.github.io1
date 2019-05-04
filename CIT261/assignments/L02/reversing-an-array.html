@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Reversing an Array</title>
+     <script>
+
+
+          function reverseArray() {
+               let input1 = [document.getElementById("input1").value];
+               console.log(input1);
+               // let store = input1.pop();
+               // console.log(store);
+
+
+               for (var i = 0; i < input1.length; i++) {
+                    document.getElementById("output1").innerHTML = input1.pop();
+                    //      var reverse = input1.pop();
+                    //      console.log(reverse[i]);
+               }
+          }
+
+
+     </script>
+</head>
+
+<body>
+     <h1>Reversing an Array</h1>
+     <h2>Type something and I'll reverse it</h2>
+     <input id="input1" type="text"> <br><br><br>
+     <button onclick="reverseArray()">Reverse</button><br><br><br>
+     <h3 id="output1"></h3><br><br><br>
+     <h2>Switch it back</h2><br>
+     <button onclick="reverseArrayInPlace()">Reverse It</button><br><br><br>
+     <h3 id="output2"></h3><br><br><br>
+</body>
+
+</html>

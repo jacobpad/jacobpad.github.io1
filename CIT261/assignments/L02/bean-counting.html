@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+     <style>
+
+     </style>
+
+     <script>
+
+          function countBs() {
+               let getInput1 = document.getElementById("input1").value;
+               console.log(getInput1);
+               let letter = document.getElementById("input2").value;
+               console.log(letter);
+               let count = 0;
+
+               for (var i = 0; i < getInput1.length; i++) {
+                    if (letter == getInput1[i]) {
+                         count++;
+                         console.log(i);
+                         document.getElementById("output").innerHTML = "The letter \"" + letter + "\" was found " + count + " times in \"" + getInput1 + "\".";
+                    }
+                    if (letter != getInput1[i] && count == 0) {
+                         document.getElementById("output").innerHTML = "No match found";
+                    }
+               }
+
+
+          }
+
+     </script>
+</head>
+
+<body>
+     <h1>Bean Counting</h1>
+     <h2>Input text</h2>
+     <input id="input1" type="text">
+     <h2>Input letter to count</h2>
+     <input id="input2" type="text"><br><br>
+     <button onclick="countBs()">Count</button><br><br><br><br>
+     <h3 id="output"></h3>
+
+
+</body>
+
+</html>

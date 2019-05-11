@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Cat and Hat</title>
+
+     <style>
+          body {
+               background-color: chartreuse;
+          }
+
+          img {
+               padding-left: 300px;
+               padding-top: 300px;
+               width: 700px;
+               height: auto;
+               /* display: none; */
+          }
+
+          img:first-child {
+               padding-left: 500px;
+               padding-top: 200px;
+               width: 100px;
+               height: auto;
+          }
+     </style>
+
+     <script>
+
+
+          let cat = document.querySelector("#cat");
+          let hat = document.querySelector("#hat");
+
+          let angle = 0;
+          let lastTime = null;
+          function animate(time) {
+               if (lastTime != null) angle += (time - lastTime) * 0.001;
+               lastTime = time;
+               cat.style.top = (Math.sin(angle) * 40 + 40) + 80;
+               cat.style.left = (Math.cos(angle) * 200 + 230) + 150;
+
+               // Your extensions here.
+
+               requestAnimationFrame(animate);
+          }
+          requestAnimationFrame(animate);
+
+
+
+
+          // let cat = document.querySelector("img");
+          // let angle = Math.PI / 2;
+          // function animate(time, lastTime) {
+          //      if (lastTime != null) {
+          //           angle += (time - lastTime) * 0.001;
+          //      }
+          //      cat.style.top = (Math.sin(angle) * 20) + "px";
+          //      cat.style.left = (Math.cos(angle) * 200) + "px";
+          //      requestAnimationFrame(newTime => animate(newTime, time));
+          // }
+          // requestAnimationFrame(animate);
+
+     </script>
+</head>
+
+<body>
+
+     <img src="cat1.png" id="cat" alt="cat" style="position: absolute">
+     <br>
+     <img src="hat1.png" id="hat" alt="hat" style="position: absolute">
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <title>Document</title>
+
+     <script>
+
+          function week2Team1() {
+               let read = document.getElementById("input1").value;
+               document.getElementById("below1").innerHTML = read;
+          }
+          function calculate() {
+               let number = document.getElementById("input2").value;
+               console.log(number);
+               let realNumber = parseFloat(number);
+               console.log(realNumber);
+               let output = document.getElementById("below2").innerHTML = "Total is: " + summing(realNumber);
+          }
+          function summing(num) {
+               let sum = 0;
+               for (let i = 1; i <= num; i++) {
+                    sum += i;
+               }
+               return sum;
+          }
+          function addingMachine() {
+               let one = document.getElementById("input3").value;
+               let one1 = parseFloat(one);
+               let two = document.getElementById("input4").value;
+               let two2 = parseFloat(two);
+               sumOf2 = one1 + two2;
+               let tre = document.getElementById("below3").innerHTML = "Total is: " + sumOf2;
+
+
+          }
+
+
+     </script>
+
+</head>
+
+<body>
+     <section>
+          <h1>Input Something</h1>
+          <input id="input1" type="text">
+          <button onclick="week2Team1()">Display it Back</button>
+          <div id="below1"></div>
+     </section>
+     <p>============================================================</p>
+     <section>
+          <h1>Input a Number</h1>
+          <input id="input2" type="number">
+          <button onclick="calculate()">Do Math</button>
+          <div id="below2"></div>
+     </section>
+     <p>============================================================</p>
+     <section>
+          <h1>Adding Machine</h1>
+          <h2>Enter a Number Into Each Input</h2>
+          <input id="input3" type="number"><br><br>
+          <input id="input4" type="number"><br><br>
+          <button onclick="addingMachine()">+</button><br><br>
+          <div id="below3"></div>
+     </section>
+</body>
+
+</html>

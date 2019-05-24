@@ -6,6 +6,7 @@
           "chesnay",
           "chorley",
           "currentdate",
+          "failure",
           "greenbration",
           "greensome",
           "greenville",
@@ -13,12 +14,15 @@
           "hinckley",
           "iurl",
           "jolla",
+          "klunk",
           "lstring",
+          "multiplicator",
           "openweathermap",
           "placerton",
           "ssfa",
           "sssuuubbbmmmiiittt",
           "string",
+          "unit",
           "weatherapi"
      ]
 }

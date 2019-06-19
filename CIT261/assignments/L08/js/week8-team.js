@@ -31,8 +31,16 @@ function getPeople(url) {
                                    if (people.previous === null) {
                                         document.querySelector('#previous').setAttribute('disabled', 'disabled');
                                    }
-                                   if (people.next /*=== null*/) {
+                                   if (people.next === null) {
                                         document.querySelector('#next').setAttribute('disabled', 'disabled');
+                                   }
+
+                                   document.querySelector('#previous').onclick = function () {
+                                        document.querySelector('table>tr').remove();
+                                        getPeople(people.previous);
+                                   }
+                                   document.querySelector('#next').onclick = function () {
+                                        getPeople(people.next);
                                    }
 
                               }
@@ -40,19 +48,27 @@ function getPeople(url) {
                }
           )
           .catch();
-     function prevPg(url = 'https://swapi.co/api/people/') {
-          let p = document.getElementById("previous");
-          p.onclick = () => {
-               prevPg(people.previous);
-          }
-     }
 
-     function nextPg(url = 'https://swapi.co/api/people/') {
-          let n = document.getElementById("next");
-          n.onclick = () => {
-               let nextPg = people.next;
-               nextPg(people.next);
-          }
+}
+
+
+
+
+
+
+
+function prevPg(url = 'https://swapi.co/api/people/') {
+     let p = document.getElementById("previous");
+     p.onclick = () => {
+          prevPg(people.previous);
+     }
+}
+
+function nextPg(url = 'https://swapi.co/api/people/') {
+     let n = document.getElementById("next");
+     n.onclick = () => {
+          let nextPg = people.next;
+          nextPg(people.next);
      }
 }
 

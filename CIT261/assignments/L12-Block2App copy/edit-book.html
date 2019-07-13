@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="styles/style.css">
+
+     <title>Document</title>
+</head>
+
+<body>
+     <a href="index.html">&#127968;</a>
+     <h1>Edit a Book You've Read</h1>
+
+     <section id="bookEditForm">
+          <form>
+               <div>
+                    <label for="title">Title: </label>
+                    <input type="text" id="title">
+               </div>
+               <div>
+                    <label for="author">Author: </label>
+                    <input type="text" id="author">
+               </div>
+               <div>
+                    <label for="dateFinished">Date Finished: </label>
+                    <input type="date" id="dateFinished">
+               </div>
+               <div>
+                    <!-- <label for="rating">Rating: </label>
+                         <input type="text" id="rating"> -->
+                    <label for="rating" class="rating">Rating (1-5): </label><br>
+                    <input type="range" id="rating" name="rating" value="3" min="1" max="5" step=".5"
+                         oninput="adjustRating()" onchange="adjustRating()" />
+                    <output id="sliderVal"></output>
+               </div>
+               <div>
+                    <label for="link">Link: </label>
+                    <input type="text" id="link">
+               </div>
+               <div>
+                    <button>Save</button>
+                    <button type="reset">Clear Fields</button>
+                    <!--Delete-->&#128465;</span>
+               </div>
+          </form>
+     </section>
+
+     <script src="scripts/eval-form-slider.js"></script>
+     <script src="scripts/main.js" type="module"></script>
+</body>
+
+</html>

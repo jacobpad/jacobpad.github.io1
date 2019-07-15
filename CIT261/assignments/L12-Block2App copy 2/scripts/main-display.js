@@ -5,10 +5,9 @@ let books = [];
 let editMode = false;
 
 function loadBooks() {
-     let book1 = new Book('Example Book', 'Author', 'yyyy/mm/dd', '3', 'https://www.jacobpad.com');
-
-     books.push(book1);
-     saveToLocalStorage();
+     let exampleBook = new Book('Example Book', 'Author', 'yyyy/mm/dd', '3', 'https://www.jacobpad.com');
+     books.push(exampleBook);
+     // saveToLocalStorage();
 }
 
 // un-MOVED TO SHOWBOOK.JS
@@ -26,8 +25,6 @@ function showBooks() {
      } else {
           loadBooks();
      }
-
-
 
      books.forEach(book => {
           addRow(book);
@@ -69,41 +66,40 @@ function addRow(book) {
      tr.appendChild(tdEdit);
 
      document.querySelector('tbody').appendChild(tr);
+
 }
-
-// document.getElementsByClassName("save-link").onclick = 
-function saveBookToList() {
-     let newBook = new Book(
-          document.getElementById("title").value,
-          document.getElementById("author").value,
-          document.getElementById("dateFinished").value,
-          document.getElementById("rating").value,
-          document.getElementById("link").value
-     );
-
-     books.push(newBook);
-     saveToLocalStorage();
-     addRow(newBook);
-
-     document.querySelector('input[type="reset"]').click();
-     /* TEMP */
-     console.table(books);
-}
-
-function saveToLocalStorage() {
-     // Save the book to local storage
-     localStorage.setItem('books', JSON.stringify(books));
-}
-
-function editStudent() {
-     editMode = true;
-}
-
-document.querySelectorAll('input[type="button"]').addEventListener('click', saveBookToList);
-
-/* THIS WORKED WHEN IT WAS ALL ONE PAGE, BUT SPLITTING IT UP BROKE IT */
-// document.querySelector('input[id="saveLink"]').addEventListener('click', saveBookToList);
 showBooks();
 
+// // document.getElementsByClassName("save-link").onclick = 
+// // function saveBookToList() {
+// //      let newBook = new Book(
+// //           document.getElementById("title").value,
+// //           document.getElementById("author").value,
+// //           document.getElementById("dateFinished").value,
+// //           document.getElementById("rating").value,
+// //           document.getElementById("link").value
+// //      );
+
+// //      books.push(newBook);
+// //      saveToLocalStorage();
+// //      addRow(newBook);
+
+// //      document.querySelector('input[type="reset"]').click();
+// //      /* TEMP */
+// //      console.table(newBook);
+// // }
+
+// function saveToLocalStorage() {
+//      // Save the book to local storage
+//      localStorage.setItem('books', JSON.stringify(books));
+// }
+// saveToLocalStorage();
+// // function editStudent() {
+// //      editMode = true;
+// // }
+
+// // document.querySelectorAll('input[type="button"]').addEventListener('click', saveBookToList);
+// /* THIS WORKED WHEN IT WAS ALL ONE PAGE, BUT SPLITTING IT UP BROKE IT */
+// // document.querySelector('input[id="saveLink"]').addEventListener('click', saveBookToList);
 /* TEMP */
-console.table(books);
+//console.table(books);

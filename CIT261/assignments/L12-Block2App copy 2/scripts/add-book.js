@@ -6,11 +6,15 @@ let editMode = false;
 console.log(books);
 
 function loadBooks() {
-     let book1 = new Book('Example Book', 'Author', 'yyyy/mm/dd', '3', 'https://www.jacobpad.com');
-     books.push(book1);
-     saveToLocalStorage();
+     if (localStorage.getItem("books")) {
+          books = JSON.parse(localStorage.getItem("books"));
+          console.table(books);
+     }
 }
 
+function saveToLocalStorage() {
+     localStorage.setItem('books', JSON.stringify(books));
+}
 function saveBookToList() {
      let newBook = new Book(
           document.getElementById("title").value,
@@ -21,6 +25,7 @@ function saveBookToList() {
      );
 
      books.push(newBook);
+     console.log(books);
      saveToLocalStorage();
 
      document.querySelector('input[type="reset"]').click();
@@ -29,9 +34,6 @@ function saveBookToList() {
 
 }
 
-function saveToLocalStorage() {
-     localStorage.setItem('books', JSON.stringify(books));
-}
 
 function navToHome() {
      window.location.href = './index.html';

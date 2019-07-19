@@ -5,6 +5,7 @@ let books = [];
 let editMode = false;
 
 function loadBooks() {
+
      let exampleBook = new Book('Example Book', 'Author', 'yyyy/mm/dd', '3', 'https://www.jacobpad.com');
      books.push(exampleBook);
      // saveToLocalStorage();

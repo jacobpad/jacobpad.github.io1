@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+     <link rel="stylesheet" href="styles/style.css">
+     <!-- <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script> -->
+     <title>Edit</title>
+</head>
+
+<body>
+
+     <div data-role="page">
+          <div data-role="header">
+               <a href="index.html" class="make-bigger remove-decoration">&#8678;</a>
+               <h1>Add a Book</h1>
+          </div>
+
+          <div data-role="main" class="ui-content">
+               <section id="bookAddForm">
+                    <form>
+                         <div>
+                              <label for="title">Title: </label>
+                              <input type="text" id="title">
+                         </div>
+                         <div>
+                              <label for="author">Author: </label>
+                              <input type="text" id="author">
+                         </div>
+                         <div>
+                              <label for="dateFinished">Date Finished: </label>
+                              <input type="date" id="dateFinished">
+                         </div>
+                         <div>
+                              <label for="rating" class="rating">Stars</label>
+                              <select name="rating" id="rating">
+                                   <option selected disabled>Select Rating</option>
+                                   <option value="1">&#x22C6;</option>
+                                   <option value="2">&#x2605; &#x2605;</option>
+                                   <option value="3">&#x272C; &#x272C; &#x272C;</option>
+                                   <option value="4">&#x272E; &#x272E; &#x272E; &#x272E;</option>
+                                   <option value="5">&#x272F; &#x272F; &#x272F; &#x272F; &#x272F;</option>
+                              </select>
+                         </div>
+                         <div>
+                              <label for="link">Link: </label>
+                              <input type="url" id="link" value="https://www.">
+                         </div>
+                         <br>
+                         <div>
+                              <input type="button" class="saveLink" value="Save"></input>
+                              <input type="reset" value="Clear Fields">
+                         </div>
+                    </form>
+               </section>
+          </div>
+          <div data-role="footer">
+               <span>Books I've Read by <a href="http://jacobpad.com">Jacob Padgett</a></span>
+          </div>
+     </div>
+
+     <script src="scripts/add-book.js" type="module"></script>
+</body>
+
+</html>

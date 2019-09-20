@@ -1,22 +1,23 @@
-import { Book } from './book.js';
-// import { showBooks } from './showBook';
+import { Recipe } from './recipe.js';
+// import { showRecipes } from './showRecipe';
 
-let books = [];
+let recipes = [];
 let editMode = false;
-console.log(books);
+console.log(recipes);
 
-function loadBooks() {
-     if (localStorage.getItem("books")) {
-          books = JSON.parse(localStorage.getItem("books"));
-          console.table(books);
+function loadRecipes() {
+     if (localStorage.getItem("recipes")) {
+          recipes = JSON.parse(localStorage.getItem("recipes"));
+          console.table(recipes);
      }
 }
 
 function saveToLocalStorage() {
-     localStorage.setItem('books', JSON.stringify(books));
+     localStorage.setItem('recipes', JSON.stringify(recipes));
 }
-function saveBookToList() {
-     let newBook = new Book(
+
+function saveRecipeToList() {
+     let newRecipe = new Recipe(
           document.getElementById("title").value,
           document.getElementById("author").value,
           document.getElementById("dateFinished").value,
@@ -24,13 +25,13 @@ function saveBookToList() {
           document.getElementById("link").value
      );
 
-     books.push(newBook);
-     console.log(books);
+     recipes.push(newRecipe);
+     console.log(recipes);
      saveToLocalStorage();
 
      document.querySelector('input[type="reset"]').click();
      /* TEMP */
-     console.table(books);
+     console.table(recipes);
 
 }
 
@@ -38,8 +39,8 @@ function saveBookToList() {
 function navToHome() {
      window.location.href = './index.html';
 }
-loadBooks();
-document.querySelector('input[type="button"]').addEventListener('click', saveBookToList);
+loadRecipes();
+document.querySelector('input[type="button"]').addEventListener('click', saveRecipeToList);
 document.querySelector('input[type="button"]').addEventListener('click', saveToLocalStorage);
 document.querySelector('input[type="button"]').addEventListener('click', navToHome);
 
@@ -47,7 +48,7 @@ document.querySelector('input[type="button"]').addEventListener('click', navToHo
 
 
 // un-MOVED TO SHOWBOOK.JS
-// function showBooks() {
+// function showRecipes() {
 //      /* REMOVE EXISTING ROWS */
 //      let table = document.querySelector('tbody');
 //      while (table.rows.length > 0) {
@@ -55,21 +56,21 @@ document.querySelector('input[type="button"]').addEventListener('click', navToHo
 //      }
 
 //      /* LOAD BOOKS FROM LOCAL STORAGE */
-//      if (localStorage.getItem("books")) {
-//           books = JSON.parse(localStorage.getItem("books"));
-//           console.table(books);
+//      if (localStorage.getItem("recipes")) {
+//           recipes = JSON.parse(localStorage.getItem("recipes"));
+//           console.table(recipes);
 //      } else {
-//           loadBooks();
+//           loadRecipes();
 //      }
 
 
 
-//      books.forEach(book => {
-//           addRow(book);
+//      recipes.forEach(recipe => {
+//           addRow(recipe);
 //      });
 // }
 
-// function addRow(book) {
+// function addRow(recipe) {
 //      let tr = document.createElement('tr');
 //      let tdTitle = document.createElement('td');
 //      let tdAuthor = document.createElement('td');
@@ -79,18 +80,18 @@ document.querySelector('input[type="button"]').addEventListener('click', navToHo
 //      let tdEdit = document.createElement('td');
 //      let link = document.querySelectorAll('input[type="url"]');
 
-//      tdTitle.innerText = book.title;
-//      tdAuthor.innerText = book.author;
-//      tdDateFinished.innerText = book.dateFinished;
-//      tdRating.innerText = book.rating;
+//      tdTitle.innerText = recipe.title;
+//      tdAuthor.innerText = recipe.author;
+//      tdDateFinished.innerText = recipe.dateFinished;
+//      tdRating.innerText = recipe.rating;
 //      ///////////////////////////////////////////////////////////
-//      if (book.link == 'https://www.') {
-//           book.link = './link-error.html';
+//      if (recipe.link == 'https://www.') {
+//           recipe.link = './link-error.html';
 //      }
-// tdLink.innerHTML = '<a href="' + book.link + '" class="remove-decoration">&#128279;</a>';
-// tdEdit.innerHTML = '<a href="./edit-book.html" class="edit-pencil">&#9998;</>';
+// tdLink.innerHTML = '<a href="' + recipe.link + '" class="remove-decoration">&#128279;</a>';
+// tdEdit.innerHTML = '<a href="./edit-recipe.html" class="edit-pencil">&#9998;</>';
 // tdEdit.innerHTML = '<a href="#" class="remove-decoration">&#9998;</a>';
-//      // tdEdit.addEventListener('click', editBook);
+//      // tdEdit.addEventListener('click', editRecipe);
 
 
 //      // console.log(link);
@@ -110,4 +111,4 @@ document.querySelector('input[type="button"]').addEventListener('click', navToHo
 // document.getElementsByClassName("save-link").onclick = 
 
 /* TEMP */
-console.table(books);
+console.table(recipes);

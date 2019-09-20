@@ -1,32 +1,32 @@
-import { Book } from './book.js';
+import { Recipe } from './recipe.js';
 
-let books = [];
+let recipes = [];
 let editMode = false;
 
-function loadBooks() {
-     let exampleBook = new Book('Example Book', 'Author', 'yyyy/mm/dd', '3', 'https://www.jacobpad.com');
-     books.push(exampleBook);
+function loadRecipes() {
+     let exampleRecipe = new Recipe('Example Recipe', 'Author', 'yyyy/mm/dd', '3', 'https://www.jacobpad.com');
+     recipes.push(exampleRecipe);
 }
 
-function showBooks() {
+function showRecipes() {
      /* REMOVE EXISTING ROWS */
      let table = document.querySelector('tbody');
      while (table.rows.length > 0) {
           table.deleteRow(0);
      }
      /* LOAD BOOKS FROM LOCAL STORAGE */
-     if (localStorage.getItem("books")) {
-          books = JSON.parse(localStorage.getItem("books"));
-          //          console.table(books);
+     if (localStorage.getItem("recipes")) {
+          recipes = JSON.parse(localStorage.getItem("recipes"));
+          //          console.table(recipes);
      } else {
-          loadBooks();
+          loadRecipes();
      }
-     books.forEach(book => {
-          addRow(book);
+     recipes.forEach(recipe => {
+          addRow(recipe);
      });
 }
 
-function addRow(book) {
+function addRow(recipe) {
      let tr = document.createElement('tr');
      let tdTitle = document.createElement('td');
      let tdAuthor = document.createElement('td');
@@ -36,18 +36,18 @@ function addRow(book) {
      let tdEdit = document.createElement('td');
      let link = document.querySelectorAll('input[type="url"]');
 
-     tdTitle.innerText = book.title;
-     tdAuthor.innerText = book.author;
-     tdDateFinished.innerText = book.dateFinished;
-     tdRating.innerText = book.rating;
+     tdTitle.innerText = recipe.title;
+     tdAuthor.innerText = recipe.author;
+     tdDateFinished.innerText = recipe.dateFinished;
+     tdRating.innerText = recipe.rating;
 
-     if (book.link == 'https://www.') {
-          book.link = './link-error.html';
+     if (recipe.link == 'https://www.') {
+          recipe.link = './link-error.html';
      }
-     tdLink.innerHTML = '<a href="' + book.link + '" class="remove-decoration">&#128279;</a>';
+     tdLink.innerHTML = '<a href="' + recipe.link + '" class="remove-decoration">&#128279;</a>';
      tdEdit.innerHTML = '<a href="#" class="remove-decoration">&#9998;</a>';
-     // tdEdit.innerHTML = '<a href="./edit-book.html" class="edit-pencil">&#9998;</>';
-     // tdEdit.addEventListener('click', editBook);
+     // tdEdit.innerHTML = '<a href="./edit-recipe.html" class="edit-pencil">&#9998;</>';
+     // tdEdit.addEventListener('click', editRecipe);
 
      tr.appendChild(tdTitle);
      tr.appendChild(tdAuthor);
@@ -58,11 +58,11 @@ function addRow(book) {
      document.querySelector('tbody').appendChild(tr);
 }
 
-function editBook() {
+function editRecipe() {
      editMode = true;
 }
 
-showBooks();
+showRecipes();
 
 /* TEMP */
-console.table(books);
+console.table(recipes);

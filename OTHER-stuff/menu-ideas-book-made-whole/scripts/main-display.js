@@ -1,18 +1,18 @@
-import { Book } from './book.js';
-// import { showBooks } from './showBook';
+import { Recipe } from './recipe.js';
+// import { showRecipes } from './showRecipe';
 
-let books = [];
+let recipes = [];
 let editMode = false;
 
-function loadBooks() {
+function loadRecipes() {
 
-     let exampleBook = new Book('Example Book', 'Author', 'yyyy/mm/dd', '3', 'https://www.jacobpad.com');
-     books.push(exampleBook);
+     let exampleRecipe = new Recipe('Example Recipe', 'Author', 'yyyy/mm/dd', '3', 'https://www.jacobpad.com');
+     recipes.push(exampleRecipe);
      // saveToLocalStorage();
 }
 
 // un-MOVED TO SHOWBOOK.JS
-function showBooks() {
+function showRecipes() {
      /* REMOVE EXISTING ROWS */
      let table = document.querySelector('tbody');
      while (table.rows.length > 0) {
@@ -20,19 +20,19 @@ function showBooks() {
      }
 
      /* LOAD BOOKS FROM LOCAL STORAGE */
-     if (localStorage.getItem("books")) {
-          books = JSON.parse(localStorage.getItem("books"));
-          console.table(books);
+     if (localStorage.getItem("recipes")) {
+          recipes = JSON.parse(localStorage.getItem("recipes"));
+          console.table(recipes);
      } else {
-          loadBooks();
+          loadRecipes();
      }
 
-     books.forEach(book => {
-          addRow(book);
+     recipes.forEach(recipe => {
+          addRow(recipe);
      });
 }
 
-function addRow(book) {
+function addRow(recipe) {
      let tr = document.createElement('tr');
      let tdTitle = document.createElement('td');
      let tdAuthor = document.createElement('td');
@@ -42,18 +42,18 @@ function addRow(book) {
      let tdEdit = document.createElement('td');
      let link = document.querySelectorAll('input[type="url"]');
 
-     tdTitle.innerText = book.title;
-     tdAuthor.innerText = book.author;
-     tdDateFinished.innerText = book.dateFinished;
-     tdRating.innerText = book.rating;
+     tdTitle.innerText = recipe.title;
+     tdAuthor.innerText = recipe.author;
+     tdDateFinished.innerText = recipe.dateFinished;
+     tdRating.innerText = recipe.rating;
      ///////////////////////////////////////////////////////////
-     if (book.link == 'https://www.') {
-          book.link = './link-error.html';
+     if (recipe.link == 'https://www.') {
+          recipe.link = './link-error.html';
      }
-     tdLink.innerHTML = '<a href="' + book.link + '" class="remove-decoration">&#128279;</a>';
-     // tdEdit.innerHTML = '<a href="./edit-book.html" class="edit-pencil">&#9998;</>';
+     tdLink.innerHTML = '<a href="' + recipe.link + '" class="remove-decoration">&#128279;</a>';
+     // tdEdit.innerHTML = '<a href="./edit-recipe.html" class="edit-pencil">&#9998;</>';
      tdEdit.innerHTML = '<a href="#" class="remove-decoration">&#9998;</a>';
-     // tdEdit.addEventListener('click', editBook);
+     // tdEdit.addEventListener('click', editRecipe);
 
 
      // console.log(link);
@@ -69,11 +69,11 @@ function addRow(book) {
      document.querySelector('tbody').appendChild(tr);
 
 }
-showBooks();
+showRecipes();
 
 // // document.getElementsByClassName("save-link").onclick = 
-// // function saveBookToList() {
-// //      let newBook = new Book(
+// // function saveRecipeToList() {
+// //      let newRecipe = new Recipe(
 // //           document.getElementById("title").value,
 // //           document.getElementById("author").value,
 // //           document.getElementById("dateFinished").value,
@@ -81,26 +81,26 @@ showBooks();
 // //           document.getElementById("link").value
 // //      );
 
-// //      books.push(newBook);
+// //      recipes.push(newRecipe);
 // //      saveToLocalStorage();
-// //      addRow(newBook);
+// //      addRow(newRecipe);
 
 // //      document.querySelector('input[type="reset"]').click();
 // //      /* TEMP */
-// //      console.table(newBook);
+// //      console.table(newRecipe);
 // // }
 
 // function saveToLocalStorage() {
-//      // Save the book to local storage
-//      localStorage.setItem('books', JSON.stringify(books));
+//      // Save the recipe to local storage
+//      localStorage.setItem('recipes', JSON.stringify(recipes));
 // }
 // saveToLocalStorage();
 // // function editStudent() {
 // //      editMode = true;
 // // }
 
-// // document.querySelectorAll('input[type="button"]').addEventListener('click', saveBookToList);
+// // document.querySelectorAll('input[type="button"]').addEventListener('click', saveRecipeToList);
 // /* THIS WORKED WHEN IT WAS ALL ONE PAGE, BUT SPLITTING IT UP BROKE IT */
-// // document.querySelector('input[id="saveLink"]').addEventListener('click', saveBookToList);
+// // document.querySelector('input[id="saveLink"]').addEventListener('click', saveRecipeToList);
 /* TEMP */
-//console.table(books);
+//console.table(recipes);

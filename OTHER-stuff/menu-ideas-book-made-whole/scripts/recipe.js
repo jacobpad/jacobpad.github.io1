@@ -1,4 +1,4 @@
-export class Book {
+export class Recipe {
      constructor(
           title,
           author,
@@ -13,3 +13,4 @@ export class Book {
                this.link = link
      }
 }
+
